@@ -1,29 +1,6 @@
-# Edge-Detection
-## Aim:
-To perform edge detection using Sobel, Laplacian, and Canny edge detectors.
-
-## Software Required:
-Anaconda - Python 3.7
-
-## Algorithm:
-### Step1:
-Import all the necessary modules for the program.
-### Step2:
-Load a image using imread() from cv2 module.
-### Step3:
-Convert the image to grayscale.
-### Step4:
-Using Sobel operator from cv2,detect the edges of the image.
-### Step5:
-Using Laplacian operator from cv2,detect the edges of the image.
-### Step6:
-Using Canny  operator from cv2,detect the edges of the image.
-## Program:
-
-``` Python
 import cv2
 import matplotlib.pyplot as plt
-image = cv2.imread("zootopia.jpg")
+image = cv2.imread("20-01.jpg")
 gray_image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 new_image = cv2.GaussianBlur(gray_image,(3,3),0)
 
@@ -99,18 +76,3 @@ plt.title('Canny Edges')
 plt.xticks([])
 plt.yticks([])
 plt.show()
-```
-## Output:
-### SOBEL EDGE DETECTOR
-#### SOBEL X:
-![inp](1.png)
-#### SOBEL Y:
-![inp](2.png)
-#### SOBEL XY:
-![inp](3.png)
-### LAPLACIAN EDGE DETECTOR
-![inp](4.png)
-### CANNY EDGE DETECTOR
-![inp](5.png)
-## Result:
-Thus the edges are detected using Sobel, Laplacian, and Canny edge detectors.
